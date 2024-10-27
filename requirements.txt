@@ -23,7 +23,7 @@ numpy==1.26.0
 streamlit-lottie==0.0.3
 regex==2023.6.3
 Python_IO==0.3
-os-sys>=2.1.0
+ os-sys<=2.1.2
 
 
 
