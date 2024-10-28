@@ -24,6 +24,7 @@ from io import BytesIO
 
 
 nltk.download('punkt', quiet=True) 
+nltk.download('punkt_tab', quiet=True) 
 
 #img
 img_logo = Image.open("images/img_logo.png")
