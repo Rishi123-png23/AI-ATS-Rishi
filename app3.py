@@ -33,6 +33,50 @@ img2 = Image.open("images/img2.png")
 img4 = Image.open("images/img4.png")
 img_logo1 = Image.open("images/img_logo1.png")
 
+#setting theme
+def set_theme(theme):
+    if theme == "dark":
+        st.markdown(
+            """
+            <style>
+            body {
+                background-color: #0e1117;
+                color: #fafafa;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #fafafa; /* Ensure headers are visible */
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+    else:
+        st.markdown(
+            """
+            <style>
+            body {
+                background-color: #ffffff;
+                color: #31333F;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #31333F; /* Ensure headers are visible */
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+
+# Initialize session state for theme
+if 'theme' not in st.session_state:
+    st.session_state.theme = 'light'
+
+# Theme toggle button
+if st.button("Toggle Theme"):
+    st.session_state.theme = 'dark' if st.session_state.theme == 'light' else 'light'
+
+# Set the theme based on the session state
+set_theme(st.session_state.theme)
+
 
 
 
@@ -43,6 +87,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
 
 # Professional color scheme based on AIonOS branding
 COLORS = {
