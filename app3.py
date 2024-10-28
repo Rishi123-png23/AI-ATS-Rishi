@@ -30,6 +30,18 @@ img2 = Image.open("images/img2.png")
 img4 = Image.open("images/img4.png")
 img_logo1 = Image.open("images/img_logo1.png")
 
+
+# Hide the Streamlit footer and hamburger menu
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    footer:after {content: ''; visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # Page configuration
 st.set_page_config(
     page_title="AIonOS-AI-ATS-125073-RK",
