@@ -26,6 +26,17 @@ from io import BytesIO
 nltk.download('punkt', quiet=True) 
 nltk.download('punkt_tab', quiet=True) 
 
+
+# Page configuration
+st.set_page_config(
+    page_title="AIonOS-AI-ATS-125073-RK",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
+
 #img
 img_logo = Image.open("images/img_logo.png")
 img_contact_form = Image.open("images/img1.jpeg")
@@ -77,16 +88,6 @@ if st.button("Toggle Theme"):
 # Set the theme based on the session state
 set_theme(st.session_state.theme)
 
-
-
-
-# Page configuration
-st.set_page_config(
-    page_title="AIonOS-AI-ATS-125073-RK",
-    page_icon="🎯",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 
 # Professional color scheme based on AIonOS branding
