@@ -22,8 +22,10 @@ import requests
 import json
 from io import BytesIO
 
-#img
 
+nltk.download('punkt', quiet=True) 
+
+#img
 img_logo = Image.open("images/img_logo.png")
 img_contact_form = Image.open("images/img1.jpeg")
 img2 = Image.open("images/img2.png")
