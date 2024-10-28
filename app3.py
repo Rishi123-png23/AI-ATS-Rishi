@@ -31,15 +31,6 @@ img4 = Image.open("images/img4.png")
 img_logo1 = Image.open("images/img_logo1.png")
 
 
-# Hide the Streamlit footer and hamburger menu
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    footer:after {content: ''; visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # Page configuration
@@ -220,6 +211,12 @@ st.markdown(f"""
         background: {COLORS['primary']};
         border-radius: 4px;
     }}
+
+    /* Hide Streamlit Footer and Main Menu */
+    #MainMenu {{visibility: hidden;}}
+    footer {{visibility: hidden;}}
+    footer:after {{content: ''; visibility: hidden;}}
+
 </style>
 """, unsafe_allow_html=True)
 
