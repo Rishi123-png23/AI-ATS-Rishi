@@ -38,7 +38,6 @@ st.set_page_config(
 
 #hiding
 
-hide_streamlit_style.py
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
