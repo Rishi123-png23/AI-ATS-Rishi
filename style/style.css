@@ -1,33 +1,203 @@
-/* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
-/* Style inputs with type="text", select elements and textareas */
-input[type=message], input[type=email], input[type=text], textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  button[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #2C3E50;
+}
+
+/* Force light theme colors for specific elements regardless of system theme */
+.stApp {
+    background-color: #F5F7FA !important;
+}
+
+/* Main Container */
+.main {
+    background-color: #F5F7FA !important;
+    padding: 2rem;
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    color: #00B8D4 !important;
+    font-weight: 600;
+}
+
+/* Custom Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white !important;
+    border-bottom: 1px solid #E0E6ED;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+}
+
+.nav-container {
+    flex: 1;
+}
+
+/* Card Styles */
+.stCard {
+    background: #F0F2F5 !important;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid #E0E6ED;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin: 1rem 0;
+}
+
+/* Metrics Card Style */
+.css-1wivap2 {
+    background-color: #F0F2F5 !important;
+    border: 1px solid #E0E6ED;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Button Styles */
+.stButton > button {
+    background-color: #00B8D4 !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
     border: none;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #0288D1 !important;
+    transform: translateY(-2px);
+}
+
+/* Progress Bar */
+.stProgress > div > div {
+    background-color: #4CAF50 !important;
+}
+
+/* Upload Section */
+.uploadedFile {
+    border: 2px dashed #00B8D4;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0,184,212,0.05);
+}
+
+/* Navigation Menu */
+.nav-link {
+    background: #F0F2F5 !important;
+    margin: 0.2rem 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #00B8D4 !important;
+    color: white !important;
+}
+
+.nav-link-selected {
+    background: #00B8D4 !important;
+    color: white !important;
+}
+
+/* Footer */
+.footer {
+    background: white !important;
+    padding: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #E0E6ED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F7FA;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00B8D4;
     border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  button[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  
-  /* Hide Streamlit Branding */
-  #MainMenu {visibility: hidden;}
-  footer {visibility: hidden;}
-  header {visibility: hidden;}
+}
+
+/* Ensure text visibility in dark mode for all Streamlit elements */
+.stTextInput > div > div > input,
+.stSelectBox > div > div > input,
+.stTextArea > div > div > textarea {
+    color: #2C3E50 !important;
+    background-color: white !important;
+}
+
+/* DataFrames and Tables */
+.dataframe {
+    color: #2C3E50 !important;
+    background-color: white !important;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: white !important;
+}
+
+.sidebar .sidebar-content {
+    background-color: white !important;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    .stApp {
+        background-color: #F5F7FA !important;
+    }
+    
+    .stMarkdown, 
+    .stText, 
+    .stCode {
+        color: #2C3E50 !important;
+    }
+    
+    .dataframe {
+        color: #2C3E50 !important;
+    }
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+footer:after {content: ''; visibility: hidden;}
+header {visibility: hidden;}
