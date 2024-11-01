@@ -1,6 +1,32 @@
 /* Import professional fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+
+/* Enhance text input, text area, and file upload backgrounds */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stFileUploader,
+.stFileUploader > div:first-child {
+    background-color: white !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+/* Ensure file upload drop zone has a clean white background */
+.stFileUploader > div:first-child {
+    background-color: white !important;
+    border: 2px dashed var(--primary-color) !important;
+    padding: 2rem !important;
+}
+
+/* Additional styling for text inputs and text areas */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    padding: 0.5rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
 /* Global Styles */
 * {
     font-family: 'Poppins', sans-serif;
