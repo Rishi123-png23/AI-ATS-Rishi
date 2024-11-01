@@ -5,16 +5,11 @@
 * {
     font-family: 'Poppins', sans-serif;
     color: #2C3E50;
-}
-
-/* Force light theme colors for specific elements regardless of system theme */
-.stApp {
-    background-color: #F5F7FA !important;
+    background-color: white !important;
 }
 
 /* Main Container */
 .main {
-    background-color: #F5F7FA !important;
     padding: 2rem;
 }
 
@@ -27,11 +22,10 @@ h1, h2, h3 {
 /* Dynamically Updated Color Variables */
 :root {
     --text-color: #2C3E50;
-    --background-color: #F5F7FA;
     --primary-color: #00B8D4;
     --secondary-color: #0288D1;
     --border-color: #E0E6ED;
-    --card-bg-color: #F0F2F5;
+    --card-bg-color: white;
     --success-color: #4CAF50;
 }
 
@@ -43,8 +37,8 @@ h1, h2, h3 {
     background: white !important;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
-    padding-top: 0; /* Remove the white rectangle above the logo */
-    padding-bottom: 0; /* Remove the white rectangle above the logo */
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .logo-container {
@@ -97,11 +91,11 @@ h1, h2, h3 {
 
 /* Upload Section */
 .uploadedFile {
+    background: white !important;
     border: 2px dashed var(--primary-color) !important;
     border-radius: 8px !important;
     padding: 1.5rem !important;
     text-align: center !important;
-    background: white !important;
     margin: 1rem 0 !important;
     transition: all 0.3s ease !important;
 }
@@ -117,7 +111,7 @@ h1, h2, h3 {
 
 /* Upload Drop Zone */
 .stFileUploader > div:first-child {
-    background-color: #f8fafc !important;
+    background-color: white !important;
     border: 2px dashed var(--primary-color) !important;
     border-radius: 8px !important;
     padding: 2rem !important;
@@ -163,7 +157,7 @@ h1, h2, h3 {
 
 /* Navigation Menu */
 .nav-link {
-    background: var(--card-bg-color) !important;
+    background: white !important;
     margin: 0.2rem 0;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -213,12 +207,8 @@ h1, h2, h3 {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
 ::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -230,14 +220,6 @@ h1, h2, h3 {
 .stMarkdown p {
     color: var(--text-color) !important;
     font-size: 0.9rem !important;
-}
-
-/* Ensure consistent white background for all elements in dark mode */
-@media (prefers-color-scheme: dark) {
-    body, .stApp, .main, .stCard, .css-1wivap2, .stFileUploader, .stFileUploader > div:first-child, .stTextInput > div > div > input, .stSelectBox > div > div > input, .stTextArea > div > div > textarea, .dataframe {
-        background-color: white !important;
-        color: var(--text-color) !important;
-    }
 }
 
 /* Ensure text visibility for all Streamlit elements */
