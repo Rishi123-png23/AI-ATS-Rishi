@@ -43,6 +43,8 @@ h1, h2, h3 {
     background: white !important;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
+    padding-top: 0; /* Remove the white rectangle above the logo */
+    padding-bottom: 0; /* Remove the white rectangle above the logo */
 }
 
 .logo-container {
@@ -230,6 +232,14 @@ h1, h2, h3 {
     font-size: 0.9rem !important;
 }
 
+/* Ensure consistent white background for all elements in dark mode */
+@media (prefers-color-scheme: dark) {
+    body, .stApp, .main, .stCard, .css-1wivap2, .stFileUploader, .stFileUploader > div:first-child, .stTextInput > div > div > input, .stSelectBox > div > div > input, .stTextArea > div > div > textarea, .dataframe {
+        background-color: white !important;
+        color: var(--text-color) !important;
+    }
+}
+
 /* Ensure text visibility for all Streamlit elements */
 .stTextInput > div > div > input,
 .stSelectBox > div > div > input,
@@ -274,40 +284,6 @@ h1, h2, h3 {
     border-radius: 8px !important;
     padding: 1rem !important;
     margin: 1rem 0 !important;
-}
-
-/* Dark mode specific overrides */
-@media (prefers-color-scheme: dark) {
-    .stApp {
-        background-color: var(--background-color) !important;
-    }
-    
-    .stMarkdown, 
-    .stText, 
-    .stCode {
-        color: var(--text-color) !important;
-    }
-    
-    .dataframe {
-        color: var(--text-color) !important;
-    }
-
-    .stFileUploader {
-        background-color: white !important;
-    }
-    
-    .stFileUploader > div:first-child {
-        background-color: #f8fafc !important;
-    }
-    
-    .stFileUploader p,
-    .stMarkdown p {
-        color: var(--text-color) !important;
-    }
-    
-    .uploadedFile {
-        background-color: white !important;
-    }
 }
 
 /* Hide Streamlit Branding */
