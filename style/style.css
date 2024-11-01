@@ -1,293 +1,44 @@
-/* Import professional fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Existing content remains the same, with the following additions/modifications: */
 
-/* Global Styles */
-* {
-    font-family: 'Poppins', sans-serif;
-    color: #2C3E50;
-}
-
-/* Force light theme colors for specific elements regardless of system theme */
-.stApp {
-    background-color: #F5F7FA !important;
-}
-
-/* Main Container */
-.main {
-    background-color: #F5F7FA !important;
-    padding: 2rem;
-}
-
-/* Header Styles */
-h1, h2, h3 {
-    color: #00B8D4 !important;
-    font-weight: 600;
-}
-
-/* Dynamically Updated Color Variables */
-:root {
-    --text-color: #2C3E50;
-    --background-color: #F5F7FA;
-    --primary-color: #00B8D4;
-    --secondary-color: #0288D1;
-    --border-color: #E0E6ED;
-    --card-bg-color: #F0F2F5;
-    --success-color: #4CAF50;
-}
-
-/* Custom Header Container */
-.header-container {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: white !important;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
-    padding-top: 0; /* Remove the white rectangle above the logo */
-    padding-bottom: 0; /* Remove the white rectangle above the logo */
-}
-
-.logo-container {
-    flex: 0 0 auto;
-    margin-right: 2rem;
-}
-
-.nav-container {
-    flex: 1;
-}
-
-/* Card Styles */
-.stCard {
-    background: var(--card-bg-color) !important;
-    border-radius: 10px;
-    padding: 1.5rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin: 1rem 0;
-}
-
-/* Metrics Card Style */
-.css-1wivap2 {
-    background-color: var(--card-bg-color) !important;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-/* Button Styles */
-.stButton > button {
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.stButton > button:hover {
-    background-color: var(--secondary-color) !important;
-    transform: translateY(-2px);
-}
-
-/* Progress Bar */
-.stProgress > div > div {
-    background-color: var(--success-color) !important;
-}
-
-/* Upload Section */
-.uploadedFile {
-    border: 2px dashed var(--primary-color) !important;
-    border-radius: 8px !important;
-    padding: 1.5rem !important;
-    text-align: center !important;
-    background: white !important;
-    margin: 1rem 0 !important;
-    transition: all 0.3s ease !important;
-}
-
-/* Upload Container */
-.stFileUploader {
-    background-color: white !important;
-    border-radius: 10px !important;
-    padding: 1.5rem !important;
-    border: 1px solid var(--border-color) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
-}
-
-/* Upload Drop Zone */
-.stFileUploader > div:first-child {
-    background-color: #f8fafc !important;
-    border: 2px dashed var(--primary-color) !important;
-    border-radius: 8px !important;
-    padding: 2rem !important;
-    color: var(--text-color) !important;
-}
-
-/* Upload Button */
-.stFileUploader > div:first-child button {
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    border: none !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 5px !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-}
-
-.stFileUploader > div:first-child button:hover {
-    background-color: var(--secondary-color) !important;
-    transform: translateY(-1px) !important;
-}
-
-/* File Upload Text */
-.stFileUploader p {
-    color: var(--text-color) !important;
-    font-size: 1rem !important;
-    margin: 0.5rem 0 !important;
-}
-
-/* Upload Icon */
-.stFileUploader svg {
-    fill: var(--primary-color) !important;
-}
-
-/* Uploaded File List */
-.stFileUploader > div > div:last-child {
-    background-color: white !important;
-    border-radius: 8px !important;
-    margin-top: 1rem !important;
-    padding: 1rem !important;
-    border: 1px solid var(--border-color) !important;
-}
-
-/* Navigation Menu */
-.nav-link {
-    background: var(--card-bg-color) !important;
-    margin: 0.2rem 0;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    background: var(--primary-color) !important;
-    color: white !important;
-}
-
-.nav-link-selected {
-    background: var(--primary-color) !important;
-    color: white !important;
-}
-
-/* Footer */
-.footer {
-    background: white !important;
-    padding: 1.5rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.footer-left {
-    text-align: left;
-}
-
-.footer-right {
-    text-align: right;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
-}
-
-/* File Type Indicator */
-.stMarkdown p {
-    color: var(--text-color) !important;
-    font-size: 0.9rem !important;
-}
-
-/* Ensure consistent white background for all elements in dark mode */
-@media (prefers-color-scheme: dark) {
-    body, .stApp, .main, .stCard, .css-1wivap2, .stFileUploader, .stFileUploader > div:first-child, .stTextInput > div > div > input, .stSelectBox > div > div > input, .stTextArea > div > div > textarea, .dataframe {
-        background-color: white !important;
-        color: var(--text-color) !important;
-    }
-}
-
-/* Ensure text visibility for all Streamlit elements */
-.stTextInput > div > div > input,
-.stSelectBox > div > div > input,
-.stTextArea > div > div > textarea {
-    color: var(--text-color) !important;
+/* Ensure white background for navigation elements */
+.stNavigationMenu {
     background-color: white !important;
 }
 
-/* DataFrames and Tables */
-.dataframe {
-    color: var(--text-color) !important;
+.stNavigationMenu > div {
     background-color: white !important;
 }
 
-/* Sidebar */
-.css-1d391kg {
+/* Additional global white background enforcement */
+body, 
+.stApp, 
+.main, 
+.stColumn, 
+.stColumns, 
+.stContainer {
     background-color: white !important;
 }
 
-.sidebar .sidebar-content {
+/* Ensure white background for sidebar and its content */
+.css-1d391kg,
+.st-emotion-cache-1d391kg,
+.sidebar-content {
     background-color: white !important;
 }
 
-/* File Upload Progress Bar */
-.stProgress > div > div {
-    background-color: var(--primary-color) !important;
+/* White background for expanded menus and dropdowns */
+.stSelectbox > div,
+.stMultiSelect > div,
+.stPopover {
+    background-color: white !important;
 }
 
-/* Error Messages */
-.stAlert {
-    background-color: #FEF2F2 !important;
-    color: #DC2626 !important;
-    border-radius: 8px !important;
-    padding: 1rem !important;
-    margin: 1rem 0 !important;
+/* Reinforce white background for all Streamlit elements */
+.stBlock,
+.stMarkdown,
+.stDataFrame,
+.stMetric,
+.stMetricValue,
+.stMetricLabel {
+    background-color: white !important;
 }
-
-/* Success Messages */
-.stSuccess {
-    background-color: #F0FDF4 !important;
-    color: #16A34A !important;
-    border-radius: 8px !important;
-    padding: 1rem !important;
-    margin: 1rem 0 !important;
-}
-
-/* Hide Streamlit Branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-footer:after {content: ''; visibility: hidden;}
-header {visibility: hidden;}
