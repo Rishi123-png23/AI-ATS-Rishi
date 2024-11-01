@@ -24,13 +24,24 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+/* Dynamically Updated Color Variables */
+:root {
+    --text-color: #2C3E50;
+    --background-color: #F5F7FA;
+    --primary-color: #00B8D4;
+    --secondary-color: #0288D1;
+    --border-color: #E0E6ED;
+    --card-bg-color: #F0F2F5;
+    --success-color: #4CAF50;
+}
+
 /* Custom Header Container */
 .header-container {
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
     background: white !important;
-    border-bottom: 1px solid #E0E6ED;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
 }
 
@@ -45,25 +56,25 @@ h1, h2, h3 {
 
 /* Card Styles */
 .stCard {
-    background: #F0F2F5 !important;
+    background: var(--card-bg-color) !important;
     border-radius: 10px;
     padding: 1.5rem;
-    border: 1px solid #E0E6ED;
+    border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     margin: 1rem 0;
 }
 
 /* Metrics Card Style */
 .css-1wivap2 {
-    background-color: #F0F2F5 !important;
-    border: 1px solid #E0E6ED;
+    background-color: var(--card-bg-color) !important;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
 }
 
 /* Button Styles */
 .stButton > button {
-    background-color: #00B8D4 !important;
+    background-color: var(--primary-color) !important;
     color: white !important;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -73,39 +84,96 @@ h1, h2, h3 {
 }
 
 .stButton > button:hover {
-    background-color: #0288D1 !important;
+    background-color: var(--secondary-color) !important;
     transform: translateY(-2px);
 }
 
 /* Progress Bar */
 .stProgress > div > div {
-    background-color: #4CAF50 !important;
+    background-color: var(--success-color) !important;
 }
 
 /* Upload Section */
 .uploadedFile {
-    border: 2px dashed #00B8D4;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    background: rgba(0,184,212,0.05);
+    border: 2px dashed var(--primary-color) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    background: white !important;
+    margin: 1rem 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Upload Container */
+.stFileUploader {
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 1.5rem !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Upload Drop Zone */
+.stFileUploader > div:first-child {
+    background-color: #f8fafc !important;
+    border: 2px dashed var(--primary-color) !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    color: var(--text-color) !important;
+}
+
+/* Upload Button */
+.stFileUploader > div:first-child button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stFileUploader > div:first-child button:hover {
+    background-color: var(--secondary-color) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* File Upload Text */
+.stFileUploader p {
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+    margin: 0.5rem 0 !important;
+}
+
+/* Upload Icon */
+.stFileUploader svg {
+    fill: var(--primary-color) !important;
+}
+
+/* Uploaded File List */
+.stFileUploader > div > div:last-child {
+    background-color: white !important;
+    border-radius: 8px !important;
+    margin-top: 1rem !important;
+    padding: 1rem !important;
+    border: 1px solid var(--border-color) !important;
 }
 
 /* Navigation Menu */
 .nav-link {
-    background: #F0F2F5 !important;
+    background: var(--card-bg-color) !important;
     margin: 0.2rem 0;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    background: #00B8D4 !important;
+    background: var(--primary-color) !important;
     color: white !important;
 }
 
 .nav-link-selected {
-    background: #00B8D4 !important;
+    background: var(--primary-color) !important;
     color: white !important;
 }
 
@@ -118,7 +186,7 @@ h1, h2, h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid #E0E6ED;
+    border-top: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,25 +216,31 @@ h1, h2, h3 {
 }
 
 ::-webkit-scrollbar-track {
-    background: #F5F7FA;
+    background: var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00B8D4;
+    background: var(--primary-color);
     border-radius: 4px;
 }
 
-/* Ensure text visibility in dark mode for all Streamlit elements */
+/* File Type Indicator */
+.stMarkdown p {
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+}
+
+/* Ensure text visibility for all Streamlit elements */
 .stTextInput > div > div > input,
 .stSelectBox > div > div > input,
 .stTextArea > div > div > textarea {
-    color: #2C3E50 !important;
+    color: var(--text-color) !important;
     background-color: white !important;
 }
 
 /* DataFrames and Tables */
 .dataframe {
-    color: #2C3E50 !important;
+    color: var(--text-color) !important;
     background-color: white !important;
 }
 
@@ -179,125 +253,9 @@ h1, h2, h3 {
     background-color: white !important;
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-    .stApp {
-        background-color: #F5F7FA !important;
-    }
-    
-    .stMarkdown, 
-    .stText, 
-    .stCode {
-        color: #2C3E50 !important;
-    }
-    
-    .dataframe {
-        color: #2C3E50 !important;
-    }
-}
-
-/* Hide Streamlit Branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-footer:after {content: ''; visibility: hidden;}
-header {visibility: hidden;}
-
-
-/* File Upload Section Styling */
-.uploadedFile {
-    border: 2px dashed #00B8D4 !important;
-    border-radius: 8px !important;
-    padding: 1.5rem !important;
-    text-align: center !important;
-    background: white !important;
-    margin: 1rem 0 !important;
-    transition: all 0.3s ease !important;
-}
-
-/* Upload Container */
-.stFileUploader {
-    background-color: white !important;
-    border-radius: 10px !important;
-    padding: 1.5rem !important;
-    border: 1px solid #E0E6ED !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
-}
-
-/* Upload Drop Zone */
-.stFileUploader > div:first-child {
-    background-color: #f8fafc !important;
-    border: 2px dashed #00B8D4 !important;
-    border-radius: 8px !important;
-    padding: 2rem !important;
-    color: #2C3E50 !important;
-}
-
-/* Upload Button */
-.stFileUploader > div:first-child button {
-    background-color: #00B8D4 !important;
-    color: white !important;
-    border: none !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 5px !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-}
-
-.stFileUploader > div:first-child button:hover {
-    background-color: #0288D1 !important;
-    transform: translateY(-1px) !important;
-}
-
-/* File Upload Text */
-.stFileUploader p {
-    color: #2C3E50 !important;
-    font-size: 1rem !important;
-    margin: 0.5rem 0 !important;
-}
-
-/* Upload Icon */
-.stFileUploader svg {
-    fill: #00B8D4 !important;
-}
-
-/* Uploaded File List */
-.stFileUploader > div > div:last-child {
-    background-color: white !important;
-    border-radius: 8px !important;
-    margin-top: 1rem !important;
-    padding: 1rem !important;
-    border: 1px solid #E0E6ED !important;
-}
-
-/* File Type Indicator */
-.stMarkdown p {
-    color: #2C3E50 !important;
-    font-size: 0.9rem !important;
-}
-
-/* Dark Mode Specific Overrides */
-@media (prefers-color-scheme: dark) {
-    .stFileUploader {
-        background-color: white !important;
-    }
-    
-    .stFileUploader > div:first-child {
-        background-color: #f8fafc !important;
-    }
-    
-    .stFileUploader p,
-    .stMarkdown p {
-        color: #2C3E50 !important;
-    }
-    
-    .uploadedFile {
-        background-color: white !important;
-    }
-}
-
 /* File Upload Progress Bar */
 .stProgress > div > div {
-    background-color: #00B8D4 !important;
+    background-color: var(--primary-color) !important;
 }
 
 /* Error Messages */
@@ -317,3 +275,43 @@ header {visibility: hidden;}
     padding: 1rem !important;
     margin: 1rem 0 !important;
 }
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+    .stApp {
+        background-color: var(--background-color) !important;
+    }
+    
+    .stMarkdown, 
+    .stText, 
+    .stCode {
+        color: var(--text-color) !important;
+    }
+    
+    .dataframe {
+        color: var(--text-color) !important;
+    }
+
+    .stFileUploader {
+        background-color: white !important;
+    }
+    
+    .stFileUploader > div:first-child {
+        background-color: #f8fafc !important;
+    }
+    
+    .stFileUploader p,
+    .stMarkdown p {
+        color: var(--text-color) !important;
+    }
+    
+    .uploadedFile {
+        background-color: white !important;
+    }
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+footer:after {content: ''; visibility: hidden;}
+header {visibility: hidden;}
